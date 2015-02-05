@@ -2,7 +2,7 @@
 
 A responsive products slider.
 
-Try the <a href="http://www.woollymittens.nl/useful/default.php?url=useful-range">demo</a>.
+Try the <a href="http://www.woollymittens.nl/useful/default.php?url=useful-products">demo</a>.
 
 ## How to include the script
 
