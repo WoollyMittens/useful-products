@@ -37,6 +37,8 @@ useful.Products.prototype.Main = function(config, context) {
         this.addControls();
         // add touch
         this.addTouch();
+		// add idle timer
+		this.addIdle();
         // redraw after every resize
         this.increment(0);
         window.addEventListener('resize', this.onResize());
@@ -68,12 +70,32 @@ useful.Products.prototype.Main = function(config, context) {
     };
 
     this.addTouch = function() {
-        // add touch
-        this.touchControls = this.onTouchControls();
-        // add the idle timer
-        this.resetIdle();
-        this.element.addEventListener('mousemove', this.onEndIdle());
-        this.element.addEventListener('touchmove', this.onEndIdle());
+        var _this = this;
+        // apply gesture events
+        this.gestures = new useful.Gestures().init({
+            'element': this.element,
+            'threshold': 50,
+            'filter': 1,
+            'increment': 0.1,
+            'cancelTouch': false,
+            'cancelGesture': false,
+            'swipeLeft': function() {
+                _this.increment(-1);
+            },
+            'swipeRight': function() {
+                _this.increment(1);
+            }
+        });
+    };
+
+    this.addIdle = function() {
+        // only idle is needed
+        if (this.config.idle && this.config.idle > 0) {
+            // add the idle timer
+            this.resetIdle();
+            this.element.addEventListener('mousemove', this.onEndIdle());
+            this.element.addEventListener('touchmove', this.onEndIdle());
+        }
     };
 
     this.increment = function(direction) {
@@ -126,25 +148,6 @@ useful.Products.prototype.Main = function(config, context) {
             // reset the interval
             _this.resetIdle();
         };
-    };
-
-    this.onTouchControls = function() {
-        var _this = this;
-        // apply gesture events
-        return new useful.Gestures().init({
-            'element': this.element,
-            'threshold': 50,
-            'filter': 1,
-            'increment': 0.1,
-            'cancelTouch': true,
-            'cancelGesture': true,
-            'swipeLeft': function() {
-                _this.increment(-1);
-            },
-            'swipeRight': function() {
-                _this.increment(1);
-            }
-        });
     };
 
     this.onNextClicked = function() {
