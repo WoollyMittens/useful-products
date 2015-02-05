@@ -1,0 +1,196 @@
+/* Custom Styling for Big Music */
+/* Product Slider */
+/* line 3, ../../src/scss/useful-products.scss */
+.products {
+  position: relative
+  /* controls */
+  /* four items per column */
+}
+/* line 5, ../../src/scss/useful-products.scss */
+.products *,
+.products *:before,
+.products *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* line 12, ../../src/scss/useful-products.scss */
+.products-wrapper {
+  overflow: hidden;
+  width: 100%;
+  height: 256px;
+  position: relative;
+}
+/* line 18, ../../src/scss/useful-products.scss */
+.products-item {
+  transition-property: left, opacity;
+  transition-duration: 500ms;
+  transition-timing-function: ease;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  list-style-type: none
+  /* demo slides */
+}
+/* line 27, ../../src/scss/useful-products.scss */
+.products-item figure {
+  position: relative;
+  width: 100%;
+  padding: 10px;
+}
+/* line 31, ../../src/scss/useful-products.scss */
+.products-item figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 0 auto 0.5em;
+}
+/* line 37, ../../src/scss/useful-products.scss */
+.products-item figure figcaption {
+  display: block;
+  text-align: center;
+}
+/* line 44, ../../src/scss/useful-products.scss */
+.products-prev, .products-next {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  overflow: hidden;
+  text-indent: 40px;
+  position: absolute;
+  top: 45%;
+  margin-top: -16px;
+  height: 32px;
+  width: 32px;
+}
+/* line 58, ../../src/scss/useful-products.scss */
+.products-prev {
+  background-image: url("../img/symbol_backward.svg");
+  left: 0;
+}
+/* line 62, ../../src/scss/useful-products.scss */
+.products-next {
+  background-image: url("../img/symbol_forward.svg");
+  right: 0;
+}
+/* line 67, ../../src/scss/useful-products.scss */
+.products-item {
+  width: 25%;
+}
+/* line 70, ../../src/scss/useful-products.scss */
+.products .product {
+  /* out of view (left) */
+  /* in view (center) */
+  /* out of view (right) */
+}
+/* line 72, ../../src/scss/useful-products.scss */
+.products .product-0 {
+  left: -25%;
+  opacity: 0;
+}
+/* line 77, ../../src/scss/useful-products.scss */
+.products .product-1 {
+  left: 0;
+  opacity: 1;
+}
+/* line 81, ../../src/scss/useful-products.scss */
+.products .product-2 {
+  left: 25%;
+  opacity: 1;
+}
+/* line 85, ../../src/scss/useful-products.scss */
+.products .product-3 {
+  left: 50%;
+  opacity: 1;
+}
+/* line 89, ../../src/scss/useful-products.scss */
+.products .product-4 {
+  left: 75%;
+  opacity: 1;
+}
+/* line 94, ../../src/scss/useful-products.scss */
+.products .product-5 {
+  left: 100%;
+  opacity: 0;
+}
+
+/* tablets */
+@media (max-width: 768px) {
+  /* line 102, ../../src/scss/useful-products.scss */
+  .products {
+    /* two items per column */
+  }
+  /* line 104, ../../src/scss/useful-products.scss */
+  .products-item {
+    width: 50%;
+  }
+  /* line 107, ../../src/scss/useful-products.scss */
+  .products .product {
+    /* out of view (left) */
+    /* in view (center) */
+    /* out of view (right) */
+    /* unused */
+  }
+  /* line 109, ../../src/scss/useful-products.scss */
+  .products .product-0 {
+    left: -50%;
+    opacity: 0;
+  }
+  /* line 114, ../../src/scss/useful-products.scss */
+  .products .product-1 {
+    left: 0;
+    opacity: 1;
+  }
+  /* line 118, ../../src/scss/useful-products.scss */
+  .products .product-2 {
+    left: 50%;
+    opacity: 1;
+  }
+  /* line 123, ../../src/scss/useful-products.scss */
+  .products .product-3 {
+    left: 100%;
+    opacity: 0;
+  }
+  /* line 128, ../../src/scss/useful-products.scss */
+  .products .product-4, .products .product-5 {
+    opacity: 0;
+  }
+}
+/* phones */
+@media (max-width: 480px) {
+  /* line 137, ../../src/scss/useful-products.scss */
+  .products {
+    /* one item per column */
+  }
+  /* line 139, ../../src/scss/useful-products.scss */
+  .products-item {
+    width: 100%;
+  }
+  /* line 142, ../../src/scss/useful-products.scss */
+  .products .product {
+    /* out of view (left) */
+    /* in view (center) */
+    /* out of view (right) */
+    /* unused */
+  }
+  /* line 144, ../../src/scss/useful-products.scss */
+  .products .product-0 {
+    left: -100%;
+    opacity: 0;
+  }
+  /* line 149, ../../src/scss/useful-products.scss */
+  .products .product-1 {
+    left: 0;
+    opacity: 1;
+  }
+  /* line 154, ../../src/scss/useful-products.scss */
+  .products .product-2 {
+    left: 100%;
+    opacity: 0;
+  }
+  /* line 159, ../../src/scss/useful-products.scss */
+  .products .product-3, .products .product-4, .products .product-5 {
+    opacity: 0;
+  }
+}

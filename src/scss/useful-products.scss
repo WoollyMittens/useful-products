@@ -1,0 +1,166 @@
+/* Custom Styling for Big Music */
+/* Product Slider */
+.products {
+    position: relative;
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    &-wrapper {
+        overflow: hidden;
+        width: 100%;
+        height: 256px;
+        position: relative;
+    }
+    &-item {
+        transition-property: left, opacity;
+        transition-duration: 500ms;
+        transition-timing-function: ease;
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        list-style-type: none;
+        /* demo slides */
+        figure {
+            position: relative;
+            width: 100%;
+            padding: 10px;
+            img {
+                display: block;
+                max-width: 100%;
+                max-height: 100%;
+                margin: 0 auto 0.5em;
+            }
+            figcaption {
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    /* controls */
+    &-prev,
+    &-next {
+        background-color: rgba(0,0,0,0.5);
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        overflow: hidden;
+        text-indent: 40px;
+        position: absolute;
+        top: 45%;
+        margin-top: -16px;
+        height: 32px;
+        width: 32px;
+    }
+    &-prev {
+        background-image: url("../img/symbol_backward.svg");
+        left: 0;
+    }
+    &-next {
+        background-image: url("../img/symbol_forward.svg");
+        right: 0;
+    }
+    /* four items per column */
+    &-item {
+        width: 25%;
+    }
+    .product {
+        /* out of view (left) */
+        &-0 {
+            left: -25%;
+            opacity: 0;
+        }
+        /* in view (center) */
+        &-1 {
+            left: 0;
+            opacity: 1;
+        }
+        &-2 {
+            left: 25%;
+            opacity: 1;
+        }
+        &-3 {
+            left: 50%;
+            opacity: 1;
+        }
+        &-4 {
+            left: 75%;
+            opacity: 1;
+        }
+        /* out of view (right) */
+        &-5 {
+            left: 100%;
+            opacity: 0;
+        }
+    }
+}
+/* tablets */
+@media (max-width: 768px) {
+    .products {
+        /* two items per column */
+        &-item {
+            width: 50%;
+        }
+        .product {
+            /* out of view (left) */
+            &-0 {
+                left: -50%;
+                opacity: 0;
+            }
+            /* in view (center) */
+            &-1 {
+                left: 0;
+                opacity: 1;
+            }
+            &-2 {
+                left: 50%;
+                opacity: 1;
+            }
+            /* out of view (right) */
+            &-3 {
+                left: 100%;
+                opacity: 0;
+            }
+            /* unused */
+            &-4,
+            &-5 {
+                opacity: 0;
+            }
+        }
+    }
+}
+/* phones */
+@media (max-width: 480px) {
+    .products {
+        /* one item per column */
+        &-item {
+            width: 100%;
+        }
+        .product {
+            /* out of view (left) */
+            &-0 {
+                left: -100%;
+                opacity: 0;
+            }
+            /* in view (center) */
+            &-1 {
+                left: 0;
+                opacity: 1;
+            }
+            /* out of view (right) */
+            &-2 {
+                left: 100%;
+                opacity: 0;
+            }
+            /* unused */
+            &-3,
+            &-4,
+            &-5 {
+                opacity: 0;
+            }
+        }
+    }
+}
