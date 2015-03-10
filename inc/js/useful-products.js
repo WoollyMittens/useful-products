@@ -944,7 +944,9 @@ useful.Products.prototype.Main = function(config, context) {
 
     this.init = function() {
         // double the contents to help with looping
-        this.doubleContent(this.wrapper);
+        if (this.config.double) {
+            this.doubleContent(this.wrapper);
+        }
         // index the elements
         for (var a = 0, b = this.items.length; a < b; a += 1) {
             this.items[a].className += ' product-' + a;
