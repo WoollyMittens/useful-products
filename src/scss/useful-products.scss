@@ -1,6 +1,6 @@
-/* Custom Styling for Big Music */
+/* Custom Styling for products slider */
 /* Product Slider */
-.products {
+.products-slider {
     position: relative;
     *,
     *:before,
@@ -20,6 +20,7 @@
         transition-duration: 500ms;
         transition-timing-function: ease;
         position: absolute;
+		    left: 100%;
         top: 0;
         opacity: 0;
         list-style-type: none;
@@ -67,7 +68,7 @@
     &-item {
         width: 25%;
     }
-    .product {
+    .psi {
         /* out of view (left) */
         &-0 {
             left: -25%;
@@ -99,12 +100,12 @@
 }
 /* tablets */
 @media (max-width: 768px) {
-    .products {
+    .products-slider {
         /* two items per column */
         &-item {
             width: 50%;
         }
-        .product {
+        .psi {
             /* out of view (left) */
             &-0 {
                 left: -50%;
@@ -134,12 +135,12 @@
 }
 /* phones */
 @media (max-width: 480px) {
-    .products {
+    .products-slider {
         /* one item per column */
         &-item {
             width: 100%;
         }
-        .product {
+        .psi {
             /* out of view (left) */
             &-0 {
                 left: -100%;

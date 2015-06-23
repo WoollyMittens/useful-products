@@ -33,6 +33,7 @@ var products = new useful.Products().init({
 	'elements': document.querySelectorAll('.products'),
 	'wrapper': '.products-wrapper',
 	'items': '.products-item',
+	'remove': null,
 	'idle': 4000
 });
 ```
@@ -42,6 +43,8 @@ var products = new useful.Products().init({
 **wrapper : {css rule}** - The scrolling wrapper inside each target element.
 
 **items : {css rule}** - The individual product items.
+
+**remove : {css rule}** - DOM elements that need to be removed before starting the slider. Typically these are extra elements left by the CMS.
 
 **idle : {miliseconds}** - The time to wait before resuming the slideshow after an interaction.
 

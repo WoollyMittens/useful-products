@@ -29,63 +29,63 @@
 
 				<!-- Cut below this -->
 				<style>@import url("./inc/css/useful-products.css");</style>
-				<div class="products">
-					<ul class="products-wrapper">
-						<li class="products-item">
+				<div class="products-slider">
+					<ul class="products-slider-wrapper">
+						<li class="products-slider-item">
 							<figure>
 								<img alt="" src="./inc/img/photo_0.jpg"/>
 								<figcaption>North Era, Royal National Park</figcaption>
 							</figure>
 						</li>
-						<li class="products-item">
+						<li class="products-slider-item">
 							<figure>
 								<img alt="" src="./inc/img/photo_1.jpg"/>
 								<figcaption>Victoria Falls, Blue Mountains National Park</figcaption>
 							</figure>
 						</li>
-						<li class="products-item">
+						<li class="products-slider-item">
 							<figure>
 								<img alt="" src="./inc/img/photo_2.jpg"/>
 								<figcaption>Grose Valley, Blue Mountains National Park</figcaption>
 							</figure>
 						</li>
-						<li class="products-item">
+						<li class="products-slider-item">
 							<figure>
 								<img alt="" src="./inc/img/photo_3.jpg"/>
 								<figcaption>Bridal Veil Falls, Blue Mountains National Park</figcaption>
 							</figure>
 						</li>
-						<li class="products-item">
+						<li class="products-slider-item">
 							<figure>
 								<img alt="" src="./inc/img/photo_4.jpg"/>
 								<figcaption>Carpet Python, Blue Mountains National Park</figcaption>
 							</figure>
 						</li>
-						<li class="products-item">
+						<li class="products-slider-item">
 							<figure>
 								<img alt="" src="./inc/img/photo_5.jpg"/>
 								<figcaption>Twelve Apostles, Great North Road</figcaption>
 							</figure>
 						</li>
-						<li class="products-item">
+						<li class="products-slider-item">
 							<figure>
 								<img alt="" src="./inc/img/photo_6.jpg"/>
 								<figcaption>Rainbow Lorikeet, Wildlife Sydney</figcaption>
 							</figure>
 						</li>
-						<li class="products-item">
+						<li class="products-slider-item">
 							<figure>
 								<img alt="" src="./inc/img/photo_7.jpg"/>
 								<figcaption>Hawkesbury River, Kuring-gai Chase National Park</figcaption>
 							</figure>
 						</li>
-						<li class="products-item">
+						<li class="products-slider-item">
 							<figure>
 								<img alt="" src="./inc/img/photo_8.jpg"/>
 								<figcaption>Kookaburra, Balmoral Beach</figcaption>
 							</figure>
 						</li>
-						<li class="products-item">
+						<li class="products-slider-item">
 							<figure>
 								<img alt="" src="./inc/img/photo_9.jpg"/>
 								<figcaption>Calna Creek, Kuring-gai Chase National Park</figcaption>
@@ -98,9 +98,10 @@
 				//<!--
 					// create new instances of the script
 					var products = new useful.Products().init({
-						'elements': document.querySelectorAll('.products'),
-						'wrapper': '.products-wrapper',
-						'items': '.products-item',
+						'elements': document.querySelectorAll('.products-slider'),
+						'wrapper': '.products-slider-wrapper',
+						'items': '.products-slider-item',
+						'remove': null,
 						'idle': 4000,
 						'double': false
 					});
