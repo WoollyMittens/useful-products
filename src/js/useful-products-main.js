@@ -49,6 +49,7 @@ useful.Products.prototype.Main = function(config, context) {
     // redraw after every resize
     this.increment(0);
     window.addEventListener('resize', this.onResize());
+    window.addEventListener('load', this.onResize());
     // return the object
     return this;
   };
@@ -161,7 +162,8 @@ useful.Products.prototype.Main = function(config, context) {
     var _this = this;
     return function() {
       // increment by 0 to force a redraw
-      _this.increment(0);
+      clearTimeout(_this.config.resizeTimeout);
+      _this.config.resizeTimeout = setTimeout(function(){ _this.increment(0) }, 100);
     };
   };
 
