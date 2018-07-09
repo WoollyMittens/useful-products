@@ -1,24 +1,8 @@
-/*
-	Source:
-	van Creij, Maurice (2014). "useful.products.js: A Responsive Products Slider", version 20141127, http://www.woollymittens.nl/.
-
-	License:
-	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
-*/
-
-// TODO: make namespace of classnames more specific
-// TODO: preprocess classnames of elements
-
-// create the constructor if needed
-var useful = useful || {};
-useful.Products = useful.Products || function() {};
-
-// extend the constructor
-useful.Products.prototype.Main = function(config, context) {
+// extend the class
+Products.prototype.Main = function(config, context) {
 
   // PROPERTIES
 
-  "use strict";
   this.config = config;
   this.context = context;
   this.element = config.element;
@@ -96,7 +80,7 @@ useful.Products.prototype.Main = function(config, context) {
   this.addTouch = function() {
     var _this = this;
     // apply gesture events
-    this.gestures = new useful.Gestures().init({
+    this.gestures = new Gestures({
       'element': this.element,
       'threshold': 50,
       'filter': 1,
@@ -195,9 +179,6 @@ useful.Products.prototype.Main = function(config, context) {
     };
   };
 
-};
+  this.init();
 
-// return as a require.js module
-if (typeof module !== 'undefined') {
-  exports = module.exports = useful.Products.Main;
-}
+};

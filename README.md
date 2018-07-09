@@ -1,4 +1,4 @@
-# useful.products.js: Responsive Products Slider
+# products.js: Responsive Products Slider
 
 A responsive products slider.
 
@@ -9,27 +9,19 @@ Try the <a href="http://www.woollymittens.nl/default.php?url=useful-products">de
 The stylesheet is best included in the header of the document.
 
 ```html
-<link rel="stylesheet" href="./css/useful-products.css"/>
+<link rel="stylesheet" href="./css/products.css"/>
 ```
 
 This include can be added to the header or placed inline before the script is invoked.
 
 ```html
-<script src="./js/useful-products.js"></script>
-```
-
-To enable the use of HTML5 tags in Internet Explorer 8 and lower, include *html5.js*.
-
-```html
-<!--[if lte IE 9]>
-	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-<![endif]-->
+<script src="./js/products.js"></script>
 ```
 
 ## How to start the script
 
 ```javascript
-var products = new useful.Products().init({
+var products = new Products({
 	'elements': document.querySelectorAll('.products'),
 	'wrapper': '.products-wrapper',
 	'items': '.products-item',
