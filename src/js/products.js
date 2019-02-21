@@ -34,6 +34,5 @@ var Products = function(config) {
 };
 
 // return as a require.js module
-if (typeof module !== 'undefined') {
-    exports = module.exports = useful.Products;
-}
+if (typeof define != 'undefined') define(['products'], function () { return Products });
+if (typeof module != 'undefined') module.exports = Products;
