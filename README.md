@@ -2,8 +2,6 @@
 
 A responsive products slider.
 
-Try the <a href="http://www.woollymittens.nl/default.php?url=useful-products">demo</a>.
-
 ## How to include the script
 
 The stylesheet is best included in the header of the document.
